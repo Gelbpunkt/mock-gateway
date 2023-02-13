@@ -1,0 +1,26 @@
+{
+    "log_level": "debug",
+    "port": 7878,
+    "externally_accessible_url": "ws://localhost:7878",
+    "scenarios": {
+        "unanswered_heartbeats": false,
+        "expired_sessions": false
+    },
+    "bot": {
+        "token": "supersecret",
+        "application_flags": 0,
+        "application_id": "1",
+        "user_flags": 0,
+        "user_id": "1",
+        "avatar": null,
+        "discriminator": 1337,
+        "name": "Yolo Bot",
+        "public_flags": 0
+    },
+    "mock_data": {
+        "guilds": 0,
+        "users": 0,
+        "channels": 0,
+        "voice_states": 0
+    }
+}

@@ -1,0 +1,4 @@
+heartbeat
+sleep_s 1
+random_message_create
+invalidate_session true

@@ -1,0 +1,36 @@
+[package]
+name = "mock-gateway"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+futures-util = { version = "0.3", default-features = false  }
+libc = "0.2"
+rand = "0.8"
+serde = { version = "1", features = ["derive"] }
+simd-json = { version = "0.7", default-features = false, features = [
+    "serde_impl"
+] }
+tokio = { version = "1", default-features = false, features = [
+    "macros",
+    "net",
+    "rt-multi-thread",
+    "sync",
+    "time"
+] }
+tokio-tungstenite = { version = "0.18", default-features = false, features = ["handshake"] }
+tracing = { version = "0.1", default-features = false }
+tracing-subscriber = { version = "0.3", default-features = false, features = [
+    "fmt",
+    "std"
+] }
+twilight-model = "0.15"
+
+[profile.release]
+codegen-units = 1
+debug = false
+incremental = false
+lto = true
+opt-level = 3
+panic = "abort"
